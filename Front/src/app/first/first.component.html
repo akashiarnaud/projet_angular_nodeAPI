@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Liste Personnage</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <input type="text" id="test">
+    <button (click)="test()">taa</button>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Personnage</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let personnage of Pu">
+        <td>{{personnage.nom}}</td>
+        <td><button type="submit" class="btn btn-info">details</button></td>
+        <td><button type="submit" class="btn btn-info">update</button></td>
+
+        <input type="hidden"  id="idP" #idP value="{{personnage.id}}">
+        <td><button class="btn btn-danger" (click)="delete()">Delete</button></td>
+
+      </tr>
+    </tbody>
+
+  </table>
+</body>
+</html>
